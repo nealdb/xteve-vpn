@@ -31,7 +31,7 @@ docker create \
   -v /path/to/config:/config \
   -v /path/to/tmp:/tmp/xteve \
   --restart unless-stopped \
-  brycelarge/xteve-docker
+  ghcr.io/nealdb/xteve-vpn:master
 ```
 
 ## Parameters
