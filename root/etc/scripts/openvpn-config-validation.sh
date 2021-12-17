@@ -7,6 +7,7 @@ if [[ ! -z "$(ifconfig | grep docker0 || true)" ]]; then
 fi
 
 VPN_PROVIDER="${OPENVPN_PROVIDER,,}"
+echo VPN_PROVIDER is $VPN_PROVIDER
 # Remove the extension so we allow the user to specify or not specify the .ovpn extension
 VPN_CONFIG="$(echo ${OPENVPN_CONFIG} | sed 's/\b.ovpn\b//g')"
 
@@ -43,7 +44,8 @@ fi
 # Exit out if the provider config directory does not exist
 if [[ ! -d "${VPN_PROVIDER_CONFIGS}" ]]; then
     echo "[OpenVPN] Could not find provider: ${OPENVPN_PROVIDER}. Exiting..." | ts '%Y-%m-%d %H:%M:%S'
-    rm -rf /etc/services.d/openvpn && exit 1
+   # rm -rf /etc/services.d/openvpn && exit 1
+   echo 'Hello  Neal' && exit 1
 fi
 
 if [[ "${VPN_PROVIDER}" == "surfshark" ]] && [[ ! -f "${VPN_PROVIDER_CONFIGS}/${VPN_CONFIG}.ovpn" ]]; then
