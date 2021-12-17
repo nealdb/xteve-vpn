@@ -73,7 +73,7 @@ In this instance `PUID=1000` and `PGID=1000`, to find yours use `id user` as bel
 Webui can be found at `<your-ip>:34400/web`
 
 ## OpenVPN
-OpenVPN is built in but disabled by default. Currently the container has Surfshark, PIA and VyprVPN config files built in so all that's needed is to specify the ovpn file name with or without the .ovpn extension.
+OpenVPN is built in but disabled by default. Currently the container has Surfshark, PIA and VyprVPN config files built in so all that's needed is to specify the ovpn file name with or without the .ovpn extension..
 
 Surfshark I have found to be the best for IPTV, less buffering but this could be different for you. I only tested with PIA and Surfshark as I had accounts with them, more can be added in the future. I have also added the ability to use other OpenVPN config files so you are not limited to Surfshark, PIA or VyprVPN.
 
