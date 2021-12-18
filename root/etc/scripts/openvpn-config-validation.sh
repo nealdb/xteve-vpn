@@ -44,8 +44,7 @@ fi
 # Exit out if the provider config directory does not exist
 if [[ ! -d "${VPN_PROVIDER_CONFIGS}" ]]; then
     echo "[OpenVPN] Could not find provider: ${OPENVPN_PROVIDER}. Exiting..." | ts '%Y-%m-%d %H:%M:%S'
-   # rm -rf /etc/services.d/openvpn && exit 1
-   echo 'Hello  Neal' && exit 1
+    rm -rf /etc/services.d/openvpn && exit 1
 fi
 
 if [[ "${VPN_PROVIDER}" == "surfshark" ]] && [[ ! -f "${VPN_PROVIDER_CONFIGS}/${VPN_CONFIG}.ovpn" ]]; then
